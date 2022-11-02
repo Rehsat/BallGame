@@ -1,18 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class HorizontalMovable : MonoBehaviour
+public class HorizontalMovable : Movavble
 {
-    // Start is called before the first frame update
-    void Start()
+    public void MoveHorizontal(float speedScale)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+         Move(new Vector2(speedScale * Speed * Time.fixedDeltaTime, MyRigidbody.velocity.y));
     }
 }

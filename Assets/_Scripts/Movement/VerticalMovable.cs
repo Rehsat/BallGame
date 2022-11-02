@@ -1,18 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class VerticalMovable : MonoBehaviour
+public class VerticalMovable : Movavble
 {
-    // Start is called before the first frame update
-    void Start()
+    public void MoveVertical()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Move(new Vector2(MyRigidbody.velocity.x, Speed * Time.fixedDeltaTime));
     }
 }
